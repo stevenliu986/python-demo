@@ -34,3 +34,21 @@ for i in range(1,10):
     for j in range(1, i+1):
         print(f'{j} x {i} = {i * j}', end='\t')
     print()
+
+# 循环综合案例
+import random
+
+# 工资总数
+salary_package = 10000
+for employee_num in range(1,21):
+    # 员工绩效分
+    grade = random.randint(1,10)
+    # 员工绩效分 < 5 不发工资
+    if grade < 5:
+        print(f'员工编号为{employee_num}的绩效为{grade}，小于5，不发工资。')
+        continue
+    if salary_package < 1000:
+        break
+    print(f'员工编号为{employee_num}的员工发工资1000元。')
+    salary_package -= 1000
+print(f'剩余工资为{salary_package}')
