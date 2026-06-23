@@ -82,6 +82,8 @@ def list_for_loop():
     mylist = ['apple', 'banana', 'pear']
     for index in range(len(mylist)):
         print(mylist[index])
+    for item in mylist:
+        print(item)
 
 
 list_while_loop()
