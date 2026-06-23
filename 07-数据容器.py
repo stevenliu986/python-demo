@@ -39,9 +39,31 @@ print('------------------------------------')
 del my_list[2]
 print(my_list)
 print('------------------------------------')
+# 统计某个元素在列表中的数量
+print(my_list.count('john'))
+print('------------------------------------')
+# 统计所有元素在列表中的数量
+print(len(my_list))
+print('------------------------------------')
 # 清空列表
 my_list.clear()
 print(my_list)
 print('------------------------------------')
 # 列表整个删除
 del my_list
+
+# 列表练习
+
+# 创建一个列表
+ages = [21, 25, 21, 23, 22, 20]
+# 追加一个数字到列表尾部
+ages.append(31)
+# 追加一个新列表到尾部
+ages.extend([29, 33, 30])
+# 取出第一个元素
+first_element = ages.pop(0)
+print(first_element)
+# 取出最后一个元素
+print(ages.pop())
+# 查找元素31的位置
+print(ages.index(31))
