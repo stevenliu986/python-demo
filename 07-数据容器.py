@@ -67,3 +67,22 @@ print(first_element)
 print(ages.pop())
 # 查找元素31的位置
 print(ages.index(31))
+
+
+# 列表循环 - 有两种方法 while/for
+def list_while_loop():
+    index = 0
+    mylist = ['john', 'tom', 'julie']
+    while index < len(mylist):
+        print(mylist[index])
+        index += 1
+
+
+def list_for_loop():
+    mylist = ['apple', 'banana', 'pear']
+    for index in range(len(mylist)):
+        print(mylist[index])
+
+
+list_while_loop()
+list_for_loop()
