@@ -88,3 +88,25 @@ def list_for_loop():
 
 list_while_loop()
 list_for_loop()
+
+# 元组 - tuple 定义后就无法修改，可以认为是一个只读的list
+# 定义元组
+my_tuple = ('john', 'tom', 'julie')
+print(my_tuple)
+# 定义单个元素的元组, 注意，这个逗号必须要有，否则就变成 str 类型了
+t1 = ('apple',)
+t2 = tuple('banana')
+print(type(t2))
+
+# 元组的常用方法 index()，count()，len()
+t3 = ((1, 2, 3), ('john', 'tom', 'julie'))
+
+# index方法与列表的使用是一致的
+index = t3.index((1, 2, 3))
+print(index)
+
+# count方法，统一元素在元组中出现的次数
+count = t3[0].count(t3[0][1])  # 出现1次
+print(count)
+
+print(len(t3))  # 长度为2
