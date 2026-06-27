@@ -142,3 +142,41 @@ result_str = my_str3.replace(' ', '|')
 print(result_str)
 # 按照'|'分隔字符串
 print(result_str.split('|'))
+
+"""
+序列切片：表示从序列中，从起始位置开始，依次取出元素，到指定位置结束，得到一个新序列
+    语法：列表[start:end:step] 
+         start：起始位置下标， 
+         end: 结束位置下标，不包含结束位置的元素
+         step：步长，默认1，计算方法是n-1 
+"""
+
+# 对list 进行切片，从1开始4结，步长1
+my_list1 = [1, 2, 3, 4, 5, 6]
+result1 = my_list1[1:4]  # 步长1省略
+print(result1)
+
+# 对 tuple 进行切片，从1开始到结尾，步长1
+my_tuple1 = (1, 2, 3, 4, 5, 6)
+result2 = my_tuple1[:]  # 起始，结束，步长都不写
+print(result2)
+
+# 对 str 进行切片，从头开始到结尾，步长2
+result3 = my_str3[::2]
+print(result3)
+
+# 对 str 进行切片，从头开始到结尾，步长-1，这个其实就是python中翻转字符串的经典写法
+my_str4 = 'hello'
+result4 = my_str4[::-1]
+print(result4)
+
+# 对list 进行切片，从3开始1结束，步长-1
+my_list2 = [1, 2, 3, 4, 5, 6]
+result5 = my_list2[3:1:-1]
+print(result5)
+
+# 切片练习 - 切片出 黑马程序员
+my_str5 = '万过薪月，员序程马黑来，nohtpy学'
+index = my_str5.index('黑')
+result6 = my_str5[index:index - 5:-1]
+print(result6)
