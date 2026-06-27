@@ -227,3 +227,36 @@ for item in my_list3:
     my_set3.add(item)
 
 print(my_set3)
+
+"""
+字典dict - 类似JS中的对象{key:value}
+"""
+# 定义字典
+my_dict = {'apple': 12, 'banana': 15, 'pear': 11}
+print(my_dict['apple'])
+
+# 定义空字典
+my_dict2: dict[str, int] = {}
+my_dict3: dict[str | int, int] = dict()
+my_dict4 = {'name': 'John', 'age': 23}
+
+# 字典嵌套
+my_dict5 = {
+    '王力宏': {'语文': 98, '数学': 99, '英语': 98},
+    '周杰伦': {'语文': 95, '数学': 89, '英语': 88},
+    '林俊杰': {'语文': 88, '数学': 69, '英语': 56}
+}
+
+# 获取嵌套字典中的信息
+print(my_dict5['王力宏']['数学'])
+
+# 字典遍历
+my_dict5_keys = my_dict5.keys()
+for key in my_dict5_keys:
+    print(key)
+    print(my_dict5[key])
+
+# 可直接对字典进行 for 循环
+for key in my_dict5:
+    for key1 in my_dict5[key]:
+        print(my_dict5[key][key1])
