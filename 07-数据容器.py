@@ -131,3 +131,14 @@ print(my_str2.count('o'))
 
 # 统计字符串的长度
 print(len(my_str2))
+
+# 字符串练习
+my_str3 = 'itheima itcase boxuegu'
+
+# 有多少个'it'字符
+print(my_str3.count('it'))
+# 空格替换为'|'
+result_str = my_str3.replace(' ', '|')
+print(result_str)
+# 按照'|'分隔字符串
+print(result_str.split('|'))
