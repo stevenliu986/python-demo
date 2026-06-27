@@ -180,3 +180,41 @@ my_str5 = '万过薪月，员序程马黑来，nohtpy学'
 index = my_str5.index('黑')
 result6 = my_str5[index:index - 5:-1]
 print(result6)
+
+# 集合 set 不支持元素重复，可去重，但元素无序
+# 声明一个集合
+my_set1 = {1, 2, 3, 4, 5, 6}
+
+## 添加元素
+my_set2 = {'apple', 'banana', 'pear'}
+my_set2.add('orange')
+print(f'my_set2添加后的结果是： {my_set2}')
+
+# 移除元素
+my_set2.remove('apple')
+print(f'my_set2移除后的结果是： {my_set2}')
+
+# 两个合集的差集，a与b的差集与b与a的差集是不一样的
+set_a = {'apple', 'banana', 'pear'}
+set_b = {'orange', 'apple', 'pear'}
+result7 = set_a - set_b
+result8 = set_a.difference(set_b)  # 与上面的结果一样
+print(result7)
+print(result8)
+print(result7 == result8)
+
+# 消除两个集合的差集 集合1.difference_update(集合2)，作用是删除集合1内与集合2内重复的元素。集合1被修改集合2不变
+set_a.difference_update(set_b)
+print(set_a)
+
+# 两个集合合并为一个, 并集
+result9 = set_a.union(set_b)
+print(result9)
+
+# 统计集合元素数量
+length = len(result9)
+print(length)
+
+# 遍历集合元素
+for item in result9:
+    print(item)
