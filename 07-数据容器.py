@@ -110,3 +110,24 @@ count = t3[0].count(t3[0][1])  # 出现1次
 print(count)
 
 print(len(t3))  # 长度为2
+
+# 字符串概念及常用方法
+# 字符串也是一种数据容器，它也是不能修改的
+my_str = ' apple is a very good fruit.  '
+
+# index方法与其他类型的用法及行为是一样的
+# split方法，使用特定字符分隔字符串，返回一个列表，默认是空字符' '
+split_my_str = my_str.split()  # ['apple', 'is', 'a', 'very', 'good', 'fruit.']
+print(split_my_str)
+
+# strip方法，移除特定字符，默认是空字符
+my_str1 = ' hello world     '  # 移除前后空字符
+print(my_str1.strip())
+my_str2 = '12hello Python123'
+print(my_str2.strip('32'))
+
+# 统计字符串中的某个字符出现的次数
+print(my_str2.count('o'))
+
+# 统计字符串的长度
+print(len(my_str2))
