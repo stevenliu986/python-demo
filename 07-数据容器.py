@@ -218,3 +218,12 @@ print(length)
 # 遍历集合元素
 for item in result9:
     print(item)
+
+# 集合练习 - 将列表中的元素添加到集合中
+my_list3 = ['黑马程序员', 'itheima', 'itcast', '黑马程序员', '传智播客', 'itheima', 'itcast', '传智播客']
+my_set3 = set()
+
+for item in my_list3:
+    my_set3.add(item)
+
+print(my_set3)
