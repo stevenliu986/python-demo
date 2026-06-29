@@ -46,3 +46,9 @@ print(result1)
     python3 -m pip install 包名。例如：python3 -m pip install numpy
 注：我当前的mac使用的是pipx install 包名 这样的命令
 """
+
+from my_utils import str_util
+result1 = str_util.str_reverse('hello');
+print(result1)
+result2 = str_util.substr('hello', 1,2)
+print(result2)
