@@ -53,4 +53,61 @@ class People:
 p11 = People('John', 21)
 print(p11.get_name('Michael'))
 
-# 继承
+# 继承：有单继承和多继承 - 单继承语法 class 类名(父类)
+class Person(People):
+    __gender = None
+
+    def __init__(self, name, age, gender=None):
+        # 调用父类的构造函数
+        super().__init__(name, age)
+        # 给子类的成员变量赋值
+        self.__gender = gender
+
+# 多继承 - 多继承语法 class 类名(父类1，父类2，父类3，...，父类n)
+# 注意：如果被继承的父类中的成员属性或成员方法，则按照从左到右的方式决定优先级，即父类1>父类2>父类3>...>父类n
+class Phone:
+    brand = 'iPhone'
+    number = '13939939909'
+
+    def call_4g(self):
+        print(f'4g通话中')
+
+class NFCReader:
+    nfc_type = '第五代NFC'
+
+    def read_card(self):
+        print(f'NFC 读卡')
+
+    def write_card(self):
+        print(f'NFC写卡')
+
+class RemoteController:
+    rc_type = '红外遥控'
+
+    def control(self):
+        print(f'红外遥控开启了')
+
+class MyPhone(Phone, NFCReader, RemoteController):
+    # 如果该子类不再有新的成员变量和成员方法，则可以用 pass
+    pass
+
+my_phone = MyPhone()
+my_phone.read_card()
+my_phone.call_4g()
+
+# 复写父类中的成员属性或方法
+# 定义子类并复写父类的成员属性和方法
+class HisPhone(Phone):
+    # 复写父类的成员属性
+    brand = 'Huawei Mate 90'
+
+    # 复写父类的成员方法
+    def call_4g(self):
+        print(f'Huawei mate 90进行4g通话了')
+        super().call_4g()
+
+
+his_phone = HisPhone()
+his_phone.call_4g()
+print(HisPhone.brand)
+print(HisPhone.number)
