@@ -27,7 +27,7 @@ print('休眠结束')
 自定义模块
 """
 import my_module1
-result = my_module1.add(1,2)
+result = my_module1.add(1, 2)
 print(result)
 
 # 导入python包中的方法 - 语法 import 包名.模块名 或 from 包名 import 模块名

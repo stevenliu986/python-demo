@@ -11,10 +11,10 @@
 """
 
 try:
-    fr = open('bill.txt','r', encoding='utf-8')
+    fr = open('../bill.txt', 'r', encoding='utf-8')
     print(fr.read())
 except:
-    fw = open('bill.txt', 'w', encoding='utf-8')
+    fw = open('../bill.txt', 'w', encoding='utf-8')
     fw.write('hello CBA, I am coming. HaHaHa')
     fw.close()
 
